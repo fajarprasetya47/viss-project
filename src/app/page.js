@@ -1,3 +1,5 @@
+'use client';
+
 import Deals from "@/components/deals";
 import FAQ from "@/components/faq";
 import Footer from "@/components/footer";
