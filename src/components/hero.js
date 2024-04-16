@@ -41,8 +41,20 @@ export default function Hero() {
                                 }}>Buy now</Button>
                             </Box>
                         </Box>
-                        <Box>
-                            <img src="/images/photos.png" style={{ height: '400px', borderRadius: "10px", objectFit: 'cover' }} />
+                        <Box sx={{
+                            height: '400px',
+                            '@media only screen and (max-width: 768px)':{
+                                height: '200px'
+                            }
+                        }}>
+                            <img
+                                src="/images/photos.png"
+                                style={{
+                                    height: '100%',
+                                    borderRadius: "10px",
+                                    objectFit: 'cover',
+                                }}
+                            />
                         </Box>
                     </Box>
                 </Container>

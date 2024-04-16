@@ -38,9 +38,15 @@ export default function FAQ() {
                     <Box sx={{
                         display: "flex",
                         justifyContent: "space-between",
+                        '@media only screen and (max-width: 768px)':{
+                            flexDirection: 'column'
+                        }
                     }}>
                         <Box sx={{
-                            width: '45%'
+                            width: '45%',
+                            '@media only screen and (max-width: 768px)':{
+                                width: 'unset'
+                            }
                         }}>
                             {dataFAQ.map((item, index) => (
                                 <AccordionStyled
@@ -67,7 +73,10 @@ export default function FAQ() {
                             ))}
                         </Box>
                         <Box sx={{
-                            width: '45%'
+                            width: '45%',
+                            '@media only screen and (max-width: 768px)':{
+                                width: 'unset'
+                            }
                         }}>
                             {dataFAQ.map((item, index) => (
                                 <AccordionStyled

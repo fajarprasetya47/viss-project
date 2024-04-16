@@ -28,17 +28,23 @@ export default function Deals() {
                 <Container maxWidth="xl">
                     <Box sx={{
                         display: "flex",
-                        justifyContent: "space-evenly",
+                        justifyContent: "space-between",
                         alignItems: 'center',
-                        // gap: "50px"
+                        gap: '36px 50px',
+                        '@media only screen and (max-width: 768px)':{
+                            flexDirection: 'column-reverse'
+                        }
                     }}>
                         <Box sx={{
                             display: 'flex',
                             alignItems: 'center',
-                            marginRight: 'auto',
                         }}>
                             <PhotoCard data={dataPhoto}/>
-                            <Box>
+                            <Box sx={{
+                                '@media only screen and (max-width: 480px)':{
+                                    display: 'none'
+                                }
+                            }}>
                                 <IconButton>
                                     <ArrowCircleRightOutlined sx={{ fontSize: '35px' }} />
                                 </IconButton>
@@ -47,7 +53,10 @@ export default function Deals() {
                         <Box sx={{
                             display: 'flex',
                             flexDirection: 'column',
-                            gap: '36px'
+                            gap: '36px',
+                            '@media only screen and (max-width: 768px)':{
+                                alignItems: 'center',
+                            }
                         }}>
                             <Typography sx={{
                                 fontSize: '36px',

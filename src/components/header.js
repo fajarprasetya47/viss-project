@@ -42,12 +42,18 @@ export default function Headers() {
                         <Box>
 
                         </Box>
-                        <Box>
+                        <Box sx={{
+                            display: 'flex',
+                            gap: '8px',
+                            '@media only screen and (max-width: 768px)':{
+                                flexDirection: 'column-reverse',
+                                alignItems: 'end'
+                            }
+                        }}>
                             <Button sx={{
                                 color: "#000",
                                 borderRadius: "15px",
                                 padding: '10px 25px',
-                                mr: 1,
                             }}>Log In</Button>
                             <Button sx={{
                                 background: "#E87A14",

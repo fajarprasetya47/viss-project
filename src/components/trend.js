@@ -61,12 +61,18 @@ export default function Trend() {
                         display: "flex",
                         justifyContent: "space-between",
                         alignItems: 'center',
-                        gap: "50px"
+                        gap: "36px 50px",
+                        '@media only screen and (max-width: 768px)':{
+                            flexDirection: 'column'
+                        }
                     }}>
                         <Box sx={{
                             display: 'flex',
                             flexDirection: 'column',
-                            gap: '36px'
+                            gap: '36px',
+                            '@media only screen and (max-width: 768px)':{
+                                alignItems: 'center',
+                            }
                         }}>
                             <Typography sx={{
                                 fontSize: '36px',
@@ -98,7 +104,11 @@ export default function Trend() {
                             alignItems: 'center'
                         }}>
                             <PhotoCard data={dataPhoto}/>
-                            <Box>
+                            <Box sx={{
+                                '@media only screen and (max-width: 480px)':{
+                                    display: 'none'
+                                }
+                            }}>
                                 <IconButton>
                                     <ArrowCircleRightOutlined sx={{ fontSize: '35px' }} />
                                 </IconButton>

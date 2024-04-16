@@ -63,12 +63,19 @@ export default function Footer() {
                 <Container maxWidth="lg">
                     <Box sx={{
                         display: 'flex',
-                        justifyContent: 'space-between'
+                        justifyContent: 'space-between',
+                        gap: '36px 20px',
+                        '@media only screen and (max-width: 768px)':{
+                            flexDirection: 'column'
+                        }
                     }}>
                         <Box sx={{
                             display: 'flex',
                             flexDirection: 'column',
                             gap: '20px',
+                            '@media only screen and (max-width: 768px)':{
+                                alignItems: 'center',
+                            },
                         }}>
                             <Box>
                                 <Typography style={{
@@ -88,7 +95,7 @@ export default function Footer() {
                             </Box>
                             <Box sx={{
                                 display: 'flex',
-                                justifyContent: 'space-evenly'
+                                gap: '20px',
                             }}>
                                 <Twitter />
                                 <Facebook />

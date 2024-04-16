@@ -28,7 +28,10 @@ export default function Services() {
                         display: "flex",
                         justifyContent: "space-between",
                         alignItems: 'center',
-                        gap: "85px"
+                        gap: "36px 85px",
+                        '@media only screen and (max-width: 768px)':{
+                            flexDirection: 'column'
+                        }
                     }}>
                         {data && data.map((item) => (
                             <Box sx={{
