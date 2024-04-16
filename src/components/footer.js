@@ -88,7 +88,7 @@ export default function Footer() {
                             </Box>
                             <Box sx={{
                                 display: 'flex',
-                                justifyContent: 'space-between'
+                                justifyContent: 'space-evenly'
                             }}>
                                 <Twitter />
                                 <Facebook />

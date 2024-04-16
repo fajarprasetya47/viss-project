@@ -1,6 +1,25 @@
+'use client';
+
 import { Box, Button, Container, Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
 
 export default function Headers() {
+    const [headerChange, setHeaderChange] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setHeaderChange(true)
+            } else {
+                setHeaderChange(false)
+            }
+        }
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.addEventListener("scroll", handleScroll);
+        }
+    }, []);
+
     return (
         <>
             <Box sx={{
@@ -9,6 +28,7 @@ export default function Headers() {
                 top: 0,
                 background: "#fff",
                 zIndex: 1,
+                boxShadow: headerChange ? '2px 2px 2px 1px rgb(0 0 0 / 5%)' : 'none',
             }}>
                 <Container maxWidth="xl">
                     <Box sx={{
