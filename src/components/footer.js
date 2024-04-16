@@ -1,4 +1,4 @@
-import { ExpandMore } from "@mui/icons-material";
+import { ExpandMore, Facebook, LinkedIn, Twitter, PlaceOutlined } from "@mui/icons-material";
 import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Container, TextField, Typography, styled } from "@mui/material";
 
 export default function Footer() {
@@ -65,6 +65,36 @@ export default function Footer() {
                         display: 'flex',
                         justifyContent: 'space-between'
                     }}>
+                        <Box sx={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: '20px',
+                        }}>
+                            <Box>
+                                <Typography style={{
+                                    fontSize: "36px",
+                                }}>Viss</Typography>
+                            </Box>
+                            <Box sx={{
+                                display: 'flex',
+                                flexWrap: 'wrap',
+                                gap: '10px',
+                                alignItems: 'center',
+                            }}>
+                                    <PlaceOutlined />
+                                <Typography>
+                                    Company Address, Earth
+                                </Typography>
+                            </Box>
+                            <Box sx={{
+                                display: 'flex',
+                                justifyContent: 'space-between'
+                            }}>
+                                <Twitter />
+                                <Facebook />
+                                <LinkedIn />
+                            </Box>
+                        </Box>
                         {footersNav.map((item) => (
                             <Box sx={{
                                 display: 'flex',
